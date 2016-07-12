@@ -1,3 +1,5 @@
+![BASE](assets/base-logo.jpg)
+
 # BASE Framework #
 
 ##### Version 0.0.1 #####
