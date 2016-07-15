@@ -1,13 +1,17 @@
 /*
-** MODIFIERS.SCSS
-**
+
+** FREE MODIFIERS.SCSS
+
 ** Table of Contents
-**
+
+** The modifiers in this file can be freely attached to classes as needed this is outside of normal BEM conventions but allows 
+mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach at the end of block__element calls. 
+
 ** 1. Utilities
 ** 2. Padding/Margin
 ** 3. Colors
 ** 4. Positioning
-**
+
 */
 
 
@@ -26,6 +30,8 @@
 	}
 }
 
+/*** 2. PADDING/MARGIN ***/
+
 .--padding{
 	padding: 4em;
 	box-sizing: border-box;
@@ -35,10 +41,6 @@
 .--no-padding{ 	padding: 0; 	}
 .--margin{ 		margin: 2em 0; 	}
 .--no-margin{ 	margin: 0; 		}
-
-
-
-/*** 2. PADDING/MARGIN ***/
 
 
 @each $name, $value in $spacing{ /* build out helper classes using variable $spacing in variables */
@@ -76,6 +78,23 @@
 
 /*** 4. POSITIONING ***/
 
+.flex {
+	display: flex;
+	flex-direction: row;
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&--flip:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+
+	&--center-content {
+		justify-content: center;
+	}
+}
+
 .--move-to-front{
 	z-index: 9999;
 }
@@ -90,7 +109,7 @@
 	box-sizing: border-box;
 }
 
-.--float-center{
+.--center{
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -102,3 +121,13 @@
 .--position-relative{
 	position: relative;
 }
+
+// Text positioning
+.--align-text-left{
+	text-align: left;
+}
+
+.--align-text-right{
+	text-align: right;
+}
+

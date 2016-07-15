@@ -11,26 +11,11 @@
 
 /*** 1. COLORS ***/
 
-$colors: 	("green", 		#00BF6F),
-			("orange", 		#FF9E1B),
-			("yellow", 		#FFCD00),
-			("black", 		#373A36),
-			("blue", 		#006BA6),
-			("light-green",	#D4EB8E),
-			("cream",		#FAF2DB),
-			("white",		#FFFFFF),
-			("gray",		#E6E6E6);
-
-$colors: 	("green", 		#aaa),
-			("orange", 		#bbb),
-			("yellow", 		#ccc),
-			("black", 		#111),
-			("blue", 		#888),
-			("light-green",	#ddd),
-			("cream",		#eee),
-			("white",		#FFFFFF),
-			("gray",		#eee);
-
+$colors: 	("primary", 	  #00BF6F),  
+				("secondary", 	#FF9E1B),
+				("tertiary", 		#FFCD00),
+				("black", 		    #373A36),
+				("white",		    #FFFFFF);
 
 /*** 2. COLUMNS ***/
 
@@ -38,8 +23,17 @@ $columns: 12;
 
 /*** 3. SPACING ***/
 
-$spacing:	(xsmall,	1em),
-			(small,		2em),
-			(med,		4em),
-			(large,		8em),
-			(xlarge,	12em);
+$spacing:  (xsmall,	1em),
+				(small,		2em),
+				(med,		4em),
+				(large,		8em),
+				(xlarge,	12em);
+
+
+@for $i from 1 through $columns {
+	/* Build out column classes from $columns variable */
+	.columns--#{$i} {
+		display: block;
+		width: ($i / $columns)*100vw;
+	}
+}

@@ -10,34 +10,27 @@
 
 /* 1. BLOCKS */
 
-@for $i from 1 through $columns{ /* Build out column classes from $columns variable */
-	.columns--#{$i}{
-		display: block;
-		width: ($i / $columns)*100vw;
+.header{
+	&__logo{
+
+	}
+	&__nav{
+
+		&__nav__list{
+
 	}
 }
 
-.flex{
-	display: flex;
-	flex-direction: row;
-	//justify-content: center;
 
-	&--column{
-		flex-direction: column;
-	}
 
-	&--flip:nth-child(even){
-		flex-direction: row-reverse;
-	}
 
-	&--center-content{
-		justify-content: center;
-	}
-}
 
-.list{
-	&--inline{
-		li{
+
+
+// block
+.list {
+	&--inline {
+		li {
 			display: inline-block;
 			padding: 0 2em;
 			margin: 0;
@@ -45,9 +38,11 @@
 	}
 }
 
+
 /* 2. ELEMENTS */
 
-.__button{
+// block
+.button {
 	padding: .75em 1.5em;
 	display: inline-block;
 	@extend .--border-black;
@@ -56,39 +51,14 @@
 	text-transform: uppercase;
 	transition: all .3s;
 	margin: 2em 0;
-
-	&:hover{
-		@extend .--bg-cream;
+	&:hover {
+		// @extend .--bg-cream;
 	}
-
-	&--light{
+	&--light {
 		@extend .--border-white;
 		@extend .--color-white;
-
-		&:hover{
-			background: rgba(255,255,255,.2);
+		&:hover {
+			background: rgba(255, 255, 255, .2);
 		}
 	}
 }
-
-/* unique to project */
-.l-circle{
-	border-radius: 100%;
-	height: 400px;
-	width: 400px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	opacity: .7;
-	text-align: center;
-
-	p{ display: none; }
-
-	&:hover{
-		z-index: 3;
-		h3{ display: none; }
-		p{ display: block; }
-	}
-}
-
-/* end unique */

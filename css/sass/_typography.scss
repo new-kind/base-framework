@@ -2,76 +2,64 @@ h1,h2,h3,h4,h5,p,li,span,a{
 	font-family: 'Lato', sans-serif;
 }
 
-.--align-center{
-	text-align: center;
 
-	h1, h2, h3, h4, h5, p{
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-}
-
-.--align-left{
-	text-align: left;
-}
-
-.--align-right{
-	text-align: right;
-}
-
-.--h1{
-	font-family: 'Lato', sans-serif;
-	font-size: 3em;
-	margin-bottom: 1em;
-	line-height: 1em;
+.title{
+	font-size: em(48);
+	line-height: em(16);
 	font-weight: 900;
+
+	&--margin-bottom{
+		margin-bottom: em(16);
+	}	
 }
 
-.--h2{
-	font-size: 2em;
-	line-height: 1em;
-	margin-bottom: 1em;
+.subtitle{
+	font-size: em(48);
+	line-height: em(16);
+
+	&--margin-bottom{
+		margin-bottom: em(16);
+	}
 }
 
-.--h3{
-	font-family: 'Lato', sans-serif;
+.header3{
 	font-weight: 800;
 }
 
-.--h4{
-	font-family: 'Lato', sans-serif;
-	@extend .--color-orange;
+.header4{
 	font-weight: 900;
-	text-transform: uppercase;
+	
+	&--upcase{
+		text-transform: uppercase;
+	}
 }
 
-.--h5{
-	font-size: .9em;
-	margin-bottom: .5em;
+.header5{
+	font-size: em(14.4);
+	margin-bottom: em(8);
 	display: block;
 }
 
-ol li{
+.ol__list-item{
 	display: list-item;
 	list-style: decimal;
-	margin-bottom: 2em;
+	margin-bottom: em(32);
 }
 
-ul li{
+.ul_list-item{
 	display: list-item;
 	list-style: disc;
-	margin-bottom: 1em;
-	margin-left: 1.5em;
+	margin-bottom: em(16);
+	margin-left: em(24);;
 }
 
-p, .--p{
+.para{
 	font-family: 'Lato', sans-serif;
-	line-height: 1.4em;
+	line-height: em(22.4);
 	font-weight: 300;
-	font-size: 1.1em;
+	font-size: em(17.6);
 
-	+ p, + .--p{
-		margin-top: 2em;
+	&--margin-top{
+		margin-top: em(32);
 	}
 }
