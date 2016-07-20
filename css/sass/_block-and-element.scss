@@ -1,14 +1,18 @@
 /*
-** BLOCKS.SCSS **
-** 
-** Table of Contents
-**
-** 1. Blocks
-** 2. Elements
-**
+| BLOCKS.SCSS **
+| 
+| Table of Contents
+|
+| 1. Blocks
+| 2. Elements
+|
 */
 
-/* 1. BLOCKS */
+/*
+|--------------------------------------------------------------------------
+| 1. BLOCKS
+|--------------------------------------------------------------------------
+*/
 
 navbar__logo--red
 .navbar{
@@ -35,10 +39,6 @@ navbar__logo--red
 	}
 }
 
-
-/* 2. ELEMENTS */
-
-// block
 .button {
 	padding: .75em 1.5em;
 	display: inline-block;

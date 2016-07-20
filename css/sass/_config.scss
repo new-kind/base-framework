@@ -1,14 +1,33 @@
 /*
-** CONFIG.SCSS
-**
-** Table of Contents
-** 
-** 1. Colors
-** 2. Columns
-**
+| CONFIG.SCSS
+|
+| Table of Contents
+| 
+| 1. Helper Functions
+| 2. Colors
+| 3. Columns
+|
 */
 
-/*** 1. COLORS ***/
+/*
+|--------------------------------------------------------------------------
+| 1. HELPER FUNCTIONS
+|--------------------------------------------------------------------------
+*/
+
+$browser-context: 16; 
+
+// em calculating function
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 2. COLORS
+|--------------------------------------------------------------------------
+*/
 
 $colors: 	("primary", 	  #D8D8D8),  
 				("secondary", 	#FF9E1B),
@@ -16,7 +35,11 @@ $colors: 	("primary", 	  #D8D8D8),
 				("black", 		    #373A36),
 				("white",		    #FFFFFF);
 
-/*** 2. COLUMNS ***/
+/*
+|--------------------------------------------------------------------------
+| 3. COLUMNS
+|--------------------------------------------------------------------------
+*/
 
 $columns: 12;
 
@@ -27,4 +50,3 @@ $spacing:  (xsmall,	1em),
 				(med,		4em),
 				(large,		8em),
 				(xlarge,	12em);
-
