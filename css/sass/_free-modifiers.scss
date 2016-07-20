@@ -1,22 +1,25 @@
 /*
-
-** FREE MODIFIERS.SCSS
-
-** Table of Contents
-
-** The modifiers in this file can be freely attached to classes as needed this is outside of normal BEM conventions but allows 
-mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach at the end of block__element calls. 
-
-** 1. Utilities
-** 2. Padding/Margin
-** 3. Colors
-** 4. Positioning
-
+|
+| FREE MODIFIERS.SCSS
+|
+| Table of Contents
+|
+| The modifiers in this file can be freely attached to classes as needed this is outside of normal BEM conventions but allows 
+| mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach at the end of block__element calls. 
+|
+| 1. Utilities
+| 2. Padding/Margin
+| 3. Colors
+| 4. Element Positioning
+| 5. Text Positioning
+|
 */
 
-
-/*** 1. UTILITIES ***/
-
+/*
+|--------------------------------------------------------------------------
+| 1. UTILITIES
+|--------------------------------------------------------------------------
+*/
 
 .--clearfix{
 	zoom: 1;
@@ -30,7 +33,11 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 	}
 }
 
-/*** 2. PADDING/MARGIN ***/
+/*
+|--------------------------------------------------------------------------
+| 2. PADDING/MARGIN
+|--------------------------------------------------------------------------
+*/
 
 .--padding{
 	padding: 4em;
@@ -43,14 +50,19 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 .--no-margin{ 	margin: 0; 		}
 
 
-@each $name, $value in $spacing{ /* build out helper classes using variable $spacing in variables */
+@each $name, $value in $spacing{ 
 	.--padding-top-#{$name}{ 	padding-top: 	$value; }
 	.--padding-bottom-#{$name}{ padding-bottom: $value; }
 	.--margin-top-#{$name}{		margin-top: 	$value;	}
 	.--margin-bottom-#{$name}{	margin-bottom:	$value; }
 }
 
-/*** 3. COLORS ***/
+
+/*
+|--------------------------------------------------------------------------
+| 3. COLORS
+|--------------------------------------------------------------------------
+*/
 
 @each $name, $hex in $colors{
 	.--color-#{$name}{
@@ -76,9 +88,20 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 
 }
 
-/*** 4. POSITIONING ***/
+/*
+|--------------------------------------------------------------------------
+| 4. ELEMENT POSITIONING
+|--------------------------------------------------------------------------
+*/
 
-.flex {
+@for $i from 1 through $columns{ 
+	.--columns--#{$i}{
+		display: block;
+		width: ($i / $columns)*100vw;
+	}
+}
+
+.--flex {
 	display: flex;
 	flex-direction: row;
 
@@ -95,6 +118,10 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 	}
 }
 
+.--container{
+    max-width: 80%;
+    @extend .--center;
+}
 .--move-to-front{
 	z-index: 9999;
 }
@@ -122,7 +149,11 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 	position: relative;
 }
 
-// Text positioning
+/*
+|--------------------------------------------------------------------------
+| 5. TEXT POSITIONING
+|--------------------------------------------------------------------------
+*/
 .--align-text-left{
 	text-align: left;
 }
@@ -131,3 +162,6 @@ mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach 
 	text-align: right;
 }
 
+.--align-text-center{
+	text-align: center;
+}

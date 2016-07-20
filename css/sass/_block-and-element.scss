@@ -10,24 +10,21 @@
 
 /* 1. BLOCKS */
 
-.header{
+navbar__logo--red
+.navbar{
+	background-color: $primary;
 	&__logo{
-
+		padding: em(5);
 	}
-	&__nav{
-
-		&__nav__list{
-
+	&__nav-list{
+			li{
+			display: inline-block;
+			padding: 0 2em;
+			margin: 0;
+			}
 	}
 }
 
-
-
-
-
-
-
-// block
 .list {
 	&--inline {
 		li {

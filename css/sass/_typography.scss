@@ -3,7 +3,7 @@ h1,h2,h3,h4,h5,p,li,span,a{
 }
 
 
-.title{
+.h1{
 	font-size: em(48);
 	line-height: em(16);
 	font-weight: 900;
@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,p,li,span,a{
 	}	
 }
 
-.subtitle{
+.h2{
 	font-size: em(48);
 	line-height: em(16);
 
@@ -22,11 +22,11 @@ h1,h2,h3,h4,h5,p,li,span,a{
 	}
 }
 
-.header3{
+.h3{
 	font-weight: 800;
 }
 
-.header4{
+.h4{
 	font-weight: 900;
 	
 	&--upcase{
@@ -34,26 +34,16 @@ h1,h2,h3,h4,h5,p,li,span,a{
 	}
 }
 
-.header5{
+.h5{
 	font-size: em(14.4);
-	margin-bottom: em(8);
 	display: block;
+	
+	&--margin-bottom{
+		margin-bottom: em(8);
+	}
 }
 
-.ol__list-item{
-	display: list-item;
-	list-style: decimal;
-	margin-bottom: em(32);
-}
-
-.ul_list-item{
-	display: list-item;
-	list-style: disc;
-	margin-bottom: em(16);
-	margin-left: em(24);;
-}
-
-.para{
+.p{
 	font-family: 'Lato', sans-serif;
 	line-height: em(22.4);
 	font-weight: 300;
@@ -63,3 +53,20 @@ h1,h2,h3,h4,h5,p,li,span,a{
 		margin-top: em(32);
 	}
 }
+
+.ol__list-item{
+	display: list-item;
+	list-style: decimal;
+
+	&--margin-bottom{
+		margin-bottom: em(32);
+	}
+}
+
+.ul_list-item{
+	display: list-item;
+	list-style: disc;
+	margin-bottom: em(16);
+	margin-left: em(24);
+}
+

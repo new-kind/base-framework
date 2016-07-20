@@ -5,13 +5,12 @@
 ** 
 ** 1. Colors
 ** 2. Columns
-** 3. Spacing
 **
 */
 
 /*** 1. COLORS ***/
 
-$colors: 	("primary", 	  #00BF6F),  
+$colors: 	("primary", 	  #D8D8D8),  
 				("secondary", 	#FF9E1B),
 				("tertiary", 		#FFCD00),
 				("black", 		    #373A36),
@@ -21,7 +20,7 @@ $colors: 	("primary", 	  #00BF6F),
 
 $columns: 12;
 
-/*** 3. SPACING ***/
+// spacing for columns
 
 $spacing:  (xsmall,	1em),
 				(small,		2em),
@@ -29,11 +28,3 @@ $spacing:  (xsmall,	1em),
 				(large,		8em),
 				(xlarge,	12em);
 
-
-@for $i from 1 through $columns {
-	/* Build out column classes from $columns variable */
-	.columns--#{$i} {
-		display: block;
-		width: ($i / $columns)*100vw;
-	}
-}
