@@ -104,15 +104,15 @@
 	display: flex;
 	flex-direction: row;
 
-	&--column {
+	&-column {
 		flex-direction: column;
 	}
 
-	&--flip:nth-child(even) {
+	&-flip:nth-child(even) {
 		flex-direction: row-reverse;
 	}
 
-	&--center-content {
+	&-center {
 		justify-content: center;
 	}
 }
