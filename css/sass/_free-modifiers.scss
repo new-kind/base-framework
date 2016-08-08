@@ -1,0 +1,166 @@
+/*
+| FREE MODIFIERS.SCSS
+|
+| Table of Contents
+|
+| The modifiers in this file can be freely attached to classes as needed this is outside of normal BEM conventions but allows 
+| mimicry of other OOCSS conventions while remaining close to BEMs intent. Attach at the end of block__element calls. 
+|
+| 1. Utilities
+| 2. Padding/Margin
+| 3. Colors
+| 4. Element Positioning
+| 5. Text Positioning
+|
+*/
+
+/*
+|--------------------------------------------------------------------------
+| 1. UTILITIES
+|--------------------------------------------------------------------------
+*/
+
+.--clearfix{
+	zoom: 1;
+
+	&:after{
+		content: '';
+		height: 0;
+		visibility: hidden;
+		clear: both;
+		display: block;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. PADDING/MARGIN
+|--------------------------------------------------------------------------
+*/
+
+.--padding{
+	padding: 4em;
+	box-sizing: border-box;
+	@extend .--clearfix;
+}
+
+.--no-padding{ 	padding: 0; 	}
+.--margin{ 		margin: 2em 0; 	}
+.--no-margin{ 	margin: 0; 		}
+
+
+@each $name, $value in $spacing{ 
+	.--padding-top-#{$name}{ 	padding-top: 	$value; }
+	.--padding-bottom-#{$name}{ padding-bottom: $value; }
+	.--margin-top-#{$name}{		margin-top: 	$value;	}
+	.--margin-bottom-#{$name}{	margin-bottom:	$value; }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 3. COLORS
+|--------------------------------------------------------------------------
+*/
+
+@each $name, $hex in $colors{
+	.--color-#{$name}{
+		color: $hex;
+	}
+
+	.--bg-#{$name}{
+		background-color: $hex;
+	}
+
+	.--border-#{$name}{
+		border: 1px solid $hex;
+	}
+}
+
+.--bg-image{
+	background-image: url('http://placehold.it/800/cccccc/dddddd/&text=IMAGE');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	//background: #ccc;
+	position: relative;
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4. ELEMENT POSITIONING
+|--------------------------------------------------------------------------
+*/
+
+@for $i from 1 through $columns{ 
+	.--columns--#{$i}{
+		display: block;
+		width: ($i / $columns)*100vw;
+	}
+}
+
+.--flex {
+	display: flex;
+	flex-direction: row;
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&--flip:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+
+	&--center-content {
+		justify-content: center;
+	}
+}
+
+.--container{
+    max-width: 80%;
+    @extend .--center;
+}
+.--move-to-front{
+	z-index: 9999;
+}
+
+.--float-right{
+	float: right;
+	box-sizing: border-box;
+}
+
+.--float-left{
+	float: left;
+	box-sizing: border-box;
+}
+
+.--center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.--position-absolute{
+	position: absolute;
+}
+
+.--position-relative{
+	position: relative;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. TEXT POSITIONING
+|--------------------------------------------------------------------------
+*/
+.--align-text-left{
+	text-align: left;
+}
+
+.--align-text-right{
+	text-align: right;
+}
+
+.--align-text-center{
+	text-align: center;
+}

@@ -1,0 +1,50 @@
+/*
+| BLOCKS.SCSS **
+| 
+| Table of Contents
+|
+| 1. Blocks
+|
+*/
+
+/*
+|--------------------------------------------------------------------------
+| 1. BLOCKS
+|--------------------------------------------------------------------------
+*/
+
+navbar__logo--red
+.navbar{
+	background-color: $primary;
+	&__logo{
+		padding: em(5);
+	}
+	&__nav-list{
+			li{
+			display: inline-block;
+			padding: 0 2em;
+			margin: 0;
+			}
+	}
+}
+
+.button {
+	padding: .75em 1.5em;
+	display: inline-block;
+	@extend .--border-black;
+	@extend .--color-black;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .3s;
+	margin: 2em 0;
+	&:hover {
+		// @extend .--bg-cream;
+	}
+	&--light {
+		@extend .--border-white;
+		@extend .--color-white;
+		&:hover {
+			background: rgba(255, 255, 255, .2);
+		}
+	}
+}

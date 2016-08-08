@@ -1,45 +1,52 @@
 /*
-** CONFIG.SCSS
-**
-** Table of Contents
-** 
-** 1. Colors
-** 2. Columns
-** 3. Spacing
-**
+| CONFIG.SCSS
+|
+| Table of Contents
+| 
+| 1. Helper Functions
+| 2. Colors
+| 3. Columns
+|
 */
 
-/*** 1. COLORS ***/
+/*
+|--------------------------------------------------------------------------
+| 1. HELPER FUNCTIONS
+|--------------------------------------------------------------------------
+*/
 
-$colors: 	("green", 		#00BF6F),
-			("orange", 		#FF9E1B),
-			("yellow", 		#FFCD00),
-			("black", 		#373A36),
-			("blue", 		#006BA6),
-			("light-green",	#D4EB8E),
-			("cream",		#FAF2DB),
-			("white",		#FFFFFF),
-			("gray",		#E6E6E6);
+$browser-context: 16; 
 
-$colors: 	("green", 		#aaa),
-			("orange", 		#bbb),
-			("yellow", 		#ccc),
-			("black", 		#111),
-			("blue", 		#888),
-			("light-green",	#ddd),
-			("cream",		#eee),
-			("white",		#FFFFFF),
-			("gray",		#eee);
+// em calculating function
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
 
 
-/*** 2. COLUMNS ***/
+/*
+|--------------------------------------------------------------------------
+| 2. COLORS
+|--------------------------------------------------------------------------
+*/
+
+$colors: 	("primary", 	  #D8D8D8),  
+				("secondary", 	#FF9E1B),
+				("tertiary", 		#FFCD00),
+				("black", 		    #373A36),
+				("white",		    #FFFFFF);
+
+/*
+|--------------------------------------------------------------------------
+| 3. COLUMNS
+|--------------------------------------------------------------------------
+*/
 
 $columns: 12;
 
-/*** 3. SPACING ***/
+// spacing for columns
 
-$spacing:	(xsmall,	1em),
-			(small,		2em),
-			(med,		4em),
-			(large,		8em),
-			(xlarge,	12em);
+$spacing:  (xsmall,	1em),
+				(small,		2em),
+				(med,		4em),
+				(large,		8em),
+				(xlarge,	12em);
