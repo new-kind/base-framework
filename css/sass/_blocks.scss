@@ -15,7 +15,8 @@
 
 navbar__logo--red
 .navbar{
-	background-color: $primary;
+	@extend .--bg-primary;
+	
 	&__logo{
 		padding: em(5);
 	}
