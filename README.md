@@ -2,7 +2,7 @@
 
 # BASE Framework #
 
-##### Version 0.0.1 #####
+##### Version 1.0.0 #####
 
 BASE is a light-weight front-end framework developed by [@joshmobley](https://twitter.com/joshmobley) and [@BrentatLOOOOOP](https://twitter.com/BrentatLOOOOOP) at [@newkind](http://newkind.com).
 
