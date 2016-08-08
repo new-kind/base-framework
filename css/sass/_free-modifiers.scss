@@ -94,7 +94,7 @@
 */
 
 @for $i from 1 through $columns{ 
-	.--columns--#{$i}{
+	.--columns-#{$i}{
 		display: block;
 		width: ($i / $columns)*100vw;
 	}
